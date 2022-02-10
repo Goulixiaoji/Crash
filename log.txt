@@ -1,0 +1,41 @@
+[22:22:56] [Server thread/WARN] [minecraft/EntityType]: Exception loading entity: 
+java.lang.NullPointerException: null
+	at net.minecraft.entity.ai.attributes.AttributeModifierManager.getValue(AttributeModifierManager.java:62) ~[forge-1.16.5-36.2.20_mapped_official_1.16.5.jar:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.getAttributeValue(LivingEntity.java:1729) ~[forge-1.16.5-36.2.20_mapped_official_1.16.5.jar:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.getMaxHealth(LivingEntity.java:1509) ~[forge-1.16.5-36.2.20_mapped_official_1.16.5.jar:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.<init>(LivingEntity.java:207) ~[forge-1.16.5-36.2.20_mapped_official_1.16.5.jar:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.<init>(MobEntity.java:108) ~[forge-1.16.5-36.2.20_mapped_official_1.16.5.jar:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.CreatureEntity.<init>(CreatureEntity.java:12) ~[forge-1.16.5-36.2.20_mapped_official_1.16.5.jar:?] {re:classloading}
+	at net.minecraft.entity.AgeableEntity.<init>(AgeableEntity.java:28) ~[forge-1.16.5-36.2.20_mapped_official_1.16.5.jar:?] {re:classloading}
+	at net.minecraft.entity.passive.AnimalEntity.<init>(AnimalEntity.java:37) ~[forge-1.16.5-36.2.20_mapped_official_1.16.5.jar:?] {re:classloading}
+	at committee.nova.slime_farm.common.entity.SlimeEntity.<init>(SlimeEntity.java:47) ~[main/:?] {re:classloading}
+	at net.minecraft.entity.EntityType.create(EntityType.java:445) ~[forge-1.16.5-36.2.20_mapped_official_1.16.5.jar:?] {re:classloading}
+	at net.minecraft.entity.EntityType.lambda$create$1(EntityType.java:456) ~[forge-1.16.5-36.2.20_mapped_official_1.16.5.jar:?] {re:classloading}
+	at java.util.Optional.map(Optional.java:215) ~[?:1.8.0_301] {}
+	at net.minecraft.entity.EntityType.create(EntityType.java:455) ~[forge-1.16.5-36.2.20_mapped_official_1.16.5.jar:?] {re:classloading}
+	at net.minecraft.entity.EntityType.loadStaticEntity(EntityType.java:513) ~[forge-1.16.5-36.2.20_mapped_official_1.16.5.jar:?] {re:classloading}
+	at net.minecraft.entity.EntityType.loadEntityRecursive(EntityType.java:495) ~[forge-1.16.5-36.2.20_mapped_official_1.16.5.jar:?] {re:classloading}
+	at net.minecraft.command.impl.SummonCommand.spawnEntity(SummonCommand.java:65) ~[forge-1.16.5-36.2.20_mapped_official_1.16.5.jar:?] {re:classloading}
+	at net.minecraft.command.impl.SummonCommand.lambda$register$1(SummonCommand.java:42) ~[forge-1.16.5-36.2.20_mapped_official_1.16.5.jar:?] {re:classloading}
+	at com.mojang.brigadier.CommandDispatcher.execute(CommandDispatcher.java:262) ~[brigadier-1.0.17.jar:?] {re:classloading}
+	at net.minecraft.command.Commands.performCommand(Commands.java:217) ~[forge:?] {re:classloading}
+	at net.minecraft.network.play.ServerPlayNetHandler.handleCommand(ServerPlayNetHandler.java:1119) ~[forge:?] {re:classloading}
+	at net.minecraft.network.play.ServerPlayNetHandler.handleChat(ServerPlayNetHandler.java:1102) ~[forge:?] {re:classloading}
+	at net.minecraft.network.play.ServerPlayNetHandler.handleChat(ServerPlayNetHandler.java:1081) ~[forge:?] {re:classloading}
+	at net.minecraft.network.play.client.CChatMessagePacket.handle(CChatMessagePacket.java:36) ~[forge:?] {re:classloading}
+	at net.minecraft.network.play.client.CChatMessagePacket.handle(CChatMessagePacket.java:9) ~[forge:?] {re:classloading}
+	at net.minecraft.network.PacketThreadUtil.lambda$ensureRunningOnSameThread$0(PacketThreadUtil.java:21) ~[forge:?] {re:classloading}
+	at net.minecraft.util.concurrent.TickDelayedTask.run(TickDelayedTask.java:18) ~[forge:?] {re:classloading}
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.doRunTask(ThreadTaskExecutor.java:144) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.util.concurrent.RecursiveEventLoop.doRunTask(RecursiveEventLoop.java:23) ~[forge:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.doRunTask(MinecraftServer.java:734) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.doRunTask(MinecraftServer.java:159) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.pollTask(ThreadTaskExecutor.java:118) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.pollTaskInternal(MinecraftServer.java:717) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.pollTask(MinecraftServer.java:711) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.runAllTasks(ThreadTaskExecutor.java:103) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.waitUntilNextTick(MinecraftServer.java:696) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:646) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:232) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_301] {}
+[22:22:57] [Render thread/INFO] [minecraft/NewChatGui]: [CHAT] Unable to summon entity
